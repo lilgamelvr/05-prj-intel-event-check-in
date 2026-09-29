@@ -25,7 +25,8 @@ body {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(
+  background:
+    linear-gradient(
       135deg,
       rgba(0, 153, 219, 0.9) 0%,
       rgba(0, 104, 181, 0.9) 50%,
@@ -250,12 +251,19 @@ button .fas {
   border-radius: 8px;
   color: #333;
   margin-bottom: 15px;
-  display: none;
+  display: block;
 }
 
 .success-message {
   background-color: #e8f4fc;
   color: #003c71;
+}
+
+.celebration-message {
+  background: linear-gradient(135deg, #fff7d6, #ffeab2);
+  border: 2px solid #f59e0b;
+  color: #92400e;
+  font-weight: 700;
 }
 
 /* Counter */
@@ -346,6 +354,74 @@ select {
   font-size: 15px;
   font-weight: 500;
   color: #475569;
+}
+
+.attendee-list-panel {
+  margin-top: 24px;
+  padding: 18px 18px 12px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  text-align: left;
+}
+
+.attendee-list-panel h4 {
+  color: #475569;
+  margin-bottom: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.attendee-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.attendee-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  color: #334155;
+}
+
+.attendee-item[data-team="water"] {
+  background: #e8f7fc;
+}
+
+.attendee-item[data-team="zero"] {
+  background: #ecfdf3;
+}
+
+.attendee-item[data-team="power"] {
+  background: #fff7ed;
+}
+
+.attendee-name {
+  font-weight: 600;
+}
+
+.attendee-team {
+  color: #475569;
+  font-size: 14px;
+}
+
+.attendee-empty {
+  padding: 10px 12px;
+  color: #64748b;
+  font-style: italic;
+  background: white;
+  border-radius: 10px;
+  border: 1px dashed #cbd5e1;
 }
 
 /* Mobile responsive */
